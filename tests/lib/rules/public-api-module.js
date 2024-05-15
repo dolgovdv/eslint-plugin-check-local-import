@@ -24,6 +24,11 @@ ruleTester.run("public-api-module", rule, {
             errors: [],
             options: [{rootPath: 'src', layers: ['features', 'entities']}]
         },
+        {
+            code: "import {ChecksClient} from 'redux/TestCheck/index.ts'",
+            errors: [],
+            options: [{rootPath: 'src', layers: ['features', 'entities']}]
+        },
     ],
 
     invalid: [
