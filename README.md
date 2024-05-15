@@ -78,10 +78,11 @@ TODO: Run eslint-doc-generator to generate the configs list (or delete this sect
 
 <!-- begin auto-generated rules list -->
 
-| Name                                                     | Description              |
-| :------------------------------------------------------- | :----------------------- |
-| [path-checker-layers](docs/rules/path-checker-layers.md) | Check path layer.        |
-| [path-checker-slices](docs/rules/path-checker-slices.md) | Check import into slices |
+| Name                                                     | Description                                                |
+| :------------------------------------------------------- | :--------------------------------------------------------- |
+| [path-checker-layers](docs/rules/path-checker-layers.md) | Check path layer.                                          |
+| [path-checker-slices](docs/rules/path-checker-slices.md) | Check import into slices                                   |
+| [public-api-module](docs/rules/public-api-module.md)     | Verifying that the module is accessed through a public api |
 
 <!-- end auto-generated rules list -->
 
