@@ -1,13 +1,13 @@
 {
   "name": "eslint-plugin-check-local-import",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The Eslint plugin for checking imports inside modules.",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
-  "author": "eslint-plugin-check-local-import",
+  "author": "Dolgov Denis",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "scripts": {

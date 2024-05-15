@@ -1,6 +1,6 @@
 /**
- * @fileoverview Check path &#39;api&#39;.
- * @author path-checker-api
+ * @fileoverview Check path
+ * @author Dolgov Denis
  */
 "use strict";
 
@@ -42,6 +42,12 @@ ruleTester.run("path-checker-layers", rule, {
     {
       filename: '\\\\wsl$\\Ubuntu\\home\\plugin\\registry\\src\\widget\\Button\\Edit.tsx',
       code: "import {Delete} from './Delete'",
+      errors: [],
+      options: [{layers: ['src']}]
+    },
+    {
+      filename: '\\\\wsl$\\Ubuntu\\home\\plugin\\registry\\src\\widget\\Button\\Edit.tsx',
+      code: "import {Delete} from 'Delete'",
       errors: [],
       options: [{layers: ['src']}]
     },

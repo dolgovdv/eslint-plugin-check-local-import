@@ -1,4 +1,6 @@
-# Check path &#39;layers&#39;. (`path-checker-layers`)
+# Check path layer (`check-local-import/path-checker-layers`)
+
+<!-- end auto-generated rule header -->
 
 Please describe the origin of the rule here.Checks whether the imported data inside the layer is relative.
 
