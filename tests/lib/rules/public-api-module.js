@@ -75,9 +75,30 @@ ruleTester.run("public-api-module", rule, {
 
     invalid: [
         {
+            name: '1',
             code: "import {ChecksClient} from 'features/TestCheck/model/index.ts'",
             errors: [{message: "Direct access to the module elements is prohibited. Absolute import is allowed only from the public api. (index.ts)"}],
             options: [{rootPath: 'src', layers: ['features', 'entities']}]
         },
+        {
+            name: '2',
+            filename: 'C:\\Users\\tim\\Desktop\\javascript\\production_project\\src\\entities\\StoreDecorator.tsx',
+            code: "import { addCommentFormActions, addCommentFormReducer } from 'entities/Article/testing/file.tsx'",
+            errors: [{message: 'Direct access to the module elements is prohibited. Absolute import is allowed only from the public api. (index.ts)'}],
+            options: [{
+                rootPath: 'src', layers: ['features', 'entities'],
+                testFilesPatterns: ['**/*.test.ts', '**/StoreDecorator.tsx']
+            }],
+        },
+        {
+            name: '3',
+            filename: 'C:\\Users\\tim\\Desktop\\javascript\\production_project\\src\\entities\\forbidden.ts',
+            code: "import { addCommentFormActions, addCommentFormReducer } from 'entities/Article/testing'",
+            errors: [{message: 'The test data must be imported from publicApi/testing.ts'}],
+            options: [{
+                rootPath: 'src', layers: ['features', 'entities'],
+                testFilesPatterns: ['**/*.test.ts', '**/StoreDecorator.tsx']
+            }],
+        }
     ],
 });
