@@ -1,6 +1,6 @@
 # eslint-plugin-check-local-import
 
-The Eslint plugin for checking imports inside modules.
+The Eslint plugin for checking imports inside modules. Based on the [FSD](https://feature-slice.design/) architecture, but can be used for any architecture.
 
 ## Installation
 

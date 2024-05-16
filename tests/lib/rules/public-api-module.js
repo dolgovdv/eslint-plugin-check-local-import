@@ -29,6 +29,48 @@ ruleTester.run("public-api-module", rule, {
             errors: [],
             options: [{rootPath: 'src', layers: ['features', 'entities']}]
         },
+        {
+            filename: '\\\\wsl$\\Ubuntu\\home\\plugin\\registry\\src\\features\\file.test.ts',
+            code: "import {ChecksClient} from 'features/TestCheck/testing'",
+            errors: [],
+            options: [{
+                rootPath: 'src',
+                layers: ['features', 'entities'],
+                testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']
+            }],
+        },
+        {
+            filename: 'C:\\Users\\tim\\Desktop\\javascript\\production_project\\src\\entities\\file.test.ts',
+            code: "import { addCommentFormActions, addCommentFormReducer } from 'entities/Article/testing'",
+            errors: [],
+            options: [{
+                rootPath: 'src',
+                layers: ['features', 'entities'],
+                testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']
+            }],
+        },
+
+        // {
+        //     filename: '\\\\wsl$\\Ubuntu\\home\\plugin\\registry\\src\\features\\StoreDecorator.tsx',
+        //     code: "import {addCommentFormActions} from 'features/TestCheck/testing'",
+        //     errors: [],
+        //     options: [{
+        //         rootPath: 'src',
+        //         layers: ['features', 'entities'],
+        //         testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']
+        //     }],
+        // },
+        // {
+        //     filename: 'C:\\Users\\tim\\Desktop\\javascript\\production_project\\src\\entities\\StoreDecorator.tsx',
+        //     code: "import { addCommentFormActions, addCommentFormReducer } from 'entities/Article/testing'",
+        //     errors: [],
+        //     options: [{
+        //         rootPath: 'src',
+        //         layers: ['features', 'entities'],
+        //         testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']
+        //     }],
+        // },
+
     ],
 
     invalid: [

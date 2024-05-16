@@ -1,7 +1,8 @@
 {
   "name": "eslint-plugin-check-local-import",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "The Eslint plugin for checking imports inside modules.",
+  "repository": "github:dolgovdv/eslint-plugin-check-local-import",
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -18,6 +19,7 @@
     "update:eslint-docs": "eslint-doc-generator"
   },
   "dependencies": {
+    "micromatch": "^4.0.5",
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
